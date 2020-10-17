@@ -2,10 +2,6 @@
 
 var generateBtn = document.querySelector("#generate");
 
-// Array to use for collecting combined character arrays
-
-var charBank = []
-
 // Character style types and default values
 
 var charstyleLower = false;
@@ -13,10 +9,11 @@ var charstyleNumbers = false;
 var charstyleSpecial = false;
 var charstyleUpper = false;
 
-// Variables for capturing number string and generated password string
+// Variables and array used for capturing number string, generated password string and combined character string
 
 var lengthPrompt = "";
 var passwordFinal = "";
+var charBank = [];
 
 // Variables for character syyle arrays
 
@@ -29,9 +26,10 @@ var specialChars = ["!", "@", "#", "$", "^", "&", "%", "*", "(", ")", "+", "="]
 
 generateBtn.addEventListener("click", function() {
 
-  // method to reset previously generated password
+  // method to reset previously generated password and charbank
 
   var passwordFinal = "";
+  var charBank = [];
 
   // Prompt to ask how many characters password should be. Answer saved once completed correctly. 
 
@@ -104,7 +102,7 @@ generateBtn.addEventListener("click", function() {
         console.log(charBank);
       }
 
-      if (charstyleUpper == true) {
+      if (charstyleSpecial == true) {
         charBank = charBank.concat(specialChars)
         console.log(charBank)
       }
