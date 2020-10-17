@@ -20,7 +20,7 @@ var charBank = [];
 var numberChars = [1,2,3,4,5,6,7,8,9,0]
 var lowerChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperChars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X","Y","Z"];
-var specialChars = ["!", "@", "#", "$", "^", "&", "%", "*", "(", ")", "+", "="]
+var specialChars = ["!", "@", "#", "$", "^", "&", "%", "*", "(", ")", "+", "=", "{", "}", "|", "_", "[", "]", "<", ">", ":", ";", "/", "~", ",", "`"]
 
 // Upon "generate password" button click, function will begin
 
@@ -40,8 +40,8 @@ generateBtn.addEventListener("click", function() {
 
     // If length outside of parameters, prompt with invalid message and ask again. Answer stored in variable. 
 
-    while(lengthPrompt < 8 || lengthPrompt > 125) {
-      alert("Invalid character entry, the total character length must be between 8 and 128 characters!");
+    while(lengthPrompt < 8 || lengthPrompt > 125 || isNaN(lengthPrompt)) {
+      alert("Invalid character entry, the entry must be a number and the total character length must be between 8 and 128 characters!");
       var lengthPrompt = prompt("How long would you like to make the password? It must be at least 8 characters and no more than 128 characters.");
       lengthPrompt;
       }

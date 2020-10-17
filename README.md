@@ -2,7 +2,7 @@
 
 This password generator is intended to display javascript logic to generate a secure password. 
 
-![password generator screenshot](pwd_gen.png)
+![password generator screenshot](./Assets/images/pwd_gen.png)
 
 # Installation
 
